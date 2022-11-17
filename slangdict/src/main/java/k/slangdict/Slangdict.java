@@ -13,5 +13,7 @@ public class Slangdict {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
+        GUI Main = new GUI();
+        Main.setVisible(true);
     }
 }

@@ -13,7 +13,10 @@ public class Slangdict {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        GUI Main = new GUI();
-        Main.setVisible(true);
+        View theView = new View();
+        Model theModel = new Model();
+        Controller theController = new Controller(theView, theModel);
+        
+        theView.setVisible(true);
     }
 }

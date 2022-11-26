@@ -9,7 +9,6 @@ package k.slangdict;
  * @author kp
  */
 import java.util.*;
-
 import java.io.*;
 import java.util.Map.Entry;
 
@@ -63,16 +62,16 @@ public final class Words {
 				s[i][0] = in.toString();
 				s[i][1] = (String) keyArray[i];
 				List<String> meaning = map.get(keyArray[i]);
-				stringBuilder.append(s[i][1] + "`" + meaning.get(0));
+				stringBuilder.append(s[i][1]).append("`").append(meaning.get(0));
 				for (int j = 1; j < meaning.size(); j++) {
-					stringBuilder.append("|" + meaning.get(j));
+					stringBuilder.append("|").append(meaning.get(j));
 				}
 				stringBuilder.append("\n");
 			}
 			printWriter.write(stringBuilder.toString());
 			printWriter.close();
 
-		} catch (Exception e) {
+		} catch (FileNotFoundException e) {
 			System.out.println(e);
 		}
 	}
@@ -86,10 +85,9 @@ public final class Words {
 		String temp = scanner.next();
 		String[] part = temp.split("\n");
 		int i = 0;
-		int flag = 0;
 		size = 0;
 		while (scanner.hasNext()) {
-			List<String> word = new ArrayList<String>();
+			List<String> word = new ArrayList<>();
 			slang = part[1].trim();
 			temp = scanner.next();
 			part = temp.split("\n");
@@ -204,7 +202,7 @@ public final class Words {
 				historyDefinition.add(part[0]);
 			}
 			scanner.close();
-		} catch (Exception e) {
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		int size = historySlag.size();
@@ -305,7 +303,7 @@ public final class Words {
     				continue;
     			else {
     			    String[] slangRand = this.random();
-    				while (slangRand[0] == s[0]) {
+    				while (slangRand[0] == null ? s[0] == null : slangRand[0].equals(s[0])) {
     				      slangRand = this.random();
     			     }
     			   s[i] = slangRand[1];
@@ -325,7 +323,7 @@ public final class Words {
 					continue;
 				else {
 					String[] slangRand = this.random();
-					while (slangRand[0] == s[0]) {
+					while (slangRand[0] == null ? s[0] == null : slangRand[0].equals(s[0])) {
 						slangRand = this.random();
 					}
 					s[i] = slangRand[0];

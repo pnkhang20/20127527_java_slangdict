@@ -19,7 +19,7 @@ public class Slangdict {
         // TODO Auto-generated method stub
         String choice = null;
         boolean exit = false;
-        Words slangword = new Words();
+        
         Controller controller = new Controller();
         Menu();
         while (true) {
@@ -44,7 +44,7 @@ public class Slangdict {
                     controller.delete();
                     break;
                 case "7":
-                    slangword.reset();
+                    controller.reset();
                     break;
                 case "8":
                     controller.random();
@@ -60,7 +60,7 @@ public class Slangdict {
                     exit = true;
                     break;
                 default:
-                    System.out.println("Not a valid option! Please try again!");
+                    System.out.println("Please input a valid choice!");
                     break;
             }
             if (exit) {
@@ -84,6 +84,6 @@ public class Slangdict {
         System.out.println("10. Quiz Game - Guess the Definition.");
         System.out.println("11. Exit Program!");
         System.out.println("---------------------------");
-        System.out.print("YOUR CHOSE: ");
+        System.out.print("Please make a choice: ");
     }
 }

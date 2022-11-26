@@ -33,37 +33,42 @@ public class Controller {
                 System.out.println("Slang not found!\n");
             }
         } catch (Exception ex) {
-            System.out.print("Exeption! Wrong input, please retry!");
+            System.out.print("Wrong input! Please retry!");
         }
     }
 
     public void findByDef() {
-        String word;
         Words slangword = new Words();
-        System.out.print("What word definition do want to find: ");
+        String[][] S = null;
+        String word;
+        System.out.print("Input a Slang definition you want to find: ");
         try {
             word = scanner.nextLine();
             S = slangword.findDefinition(word);
-            if (S != null) {  
-                for (String[] S1 : S) {
-                    System.out.print("Result: ");
-                    System.out.println(S1[2]);
-                    words.saveHistory(S1[1], S1[2]);
+            if (S != null) {
+                for (int i = 0; i <= S.length ; i++) {
+                    if (S[i][1] == S[i+1][1]){
+                        continue;
+                    }
+                    else{
+                        System.out.println("Slang: " + S[i][1] + " ||| Meaning: " + S[i][2]);
+                        words.saveHistory(S[i][1], S[i][2]);
+                    }
                 }
+                System.out.println();
             } else {
                 System.out.println("Not found");
             }
         } catch (Exception ex) {
-            System.out.print("Exeption ! Please input retry ");
+           
         }
-
     }
 
     public void showHistory() {
         S = words.readHistory();
-        System.out.println("STT" + "   " + "Slang" + "   " + "Word");
+        System.out.println("No." + "\t\t" + "Slang" + "\t\t" + "Word");
         for (int i = 0; i < S.length; i++) {
-            System.out.print(S[i][0] + "      " + S[i][1] + "      " + S[i][2]);
+            System.out.print(S[i][0] + "\t\t" + S[i][1] + "\t\t" + S[i][2]);
             System.out.println();
         }
     }
@@ -83,14 +88,14 @@ public class Controller {
                 }
             } while (SlangWord.isEmpty() || Definition.isEmpty());
             if (words.checkSlang(SlangWord)) {
-                System.out.print("Slang allready exists. Do you want Overwrite or Dupilicate ? Please 1: Overwrite or 2: Dupilicate: ");
+                System.out.print("Slang allready exists.Do you want to Overwrite or Dupilicate?\n Input 1 for Overwrite.\n Input 2 for Dupilicate\n Your choice: ");
                 input = scanner.nextLine();
                 if ("1".equals(input)) {
                     words.Overwrite(SlangWord, Definition);
-                    System.out.println("Done");
+                    System.out.println("Overwrite Slang Successfully");
                 } else {
                     words.Duplicate(SlangWord, Definition);
-                    System.out.println("Done");
+                    System.out.println("Duplicate Slang Successfully");
                 }
             } else {
                 words.addNew(SlangWord, Definition);
@@ -194,5 +199,9 @@ public class Controller {
         } else {
             System.out.println("Oops, wrong answer! Better luck next time!");
         }
+    }
+
+    public void reset() {
+        words.reset();
     }
 }

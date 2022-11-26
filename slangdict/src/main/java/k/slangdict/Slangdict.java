@@ -19,9 +19,9 @@ public class Slangdict {
         // TODO Auto-generated method stub
         String choice = null;
         boolean exit = false;
-        
         Controller controller = new Controller();
         Menu();
+        
         while (true) {
             choice = sc.nextLine();
             switch (choice) {

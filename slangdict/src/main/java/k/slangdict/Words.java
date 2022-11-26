@@ -100,13 +100,13 @@ public final class Words {
 
     public String[][] getData() {
         String s[][] = new String[size][3];
-        Set<String> slagListSet = map.keySet();
-        Object[] slagList = slagListSet.toArray();
+        Set<String> slangListSet = map.keySet();
+        Object[] slangList = slangListSet.toArray();
         int index = 0;
         for (int i = 0; i < size; i++) {
             s[i][0] = String.valueOf(i);
-            s[i][1] = (String) slagList[index];
-            List<String> word = map.get(slagList[index]);
+            s[i][1] = (String) slangList[index];
+            List<String> word = map.get(slangList[index]);
             s[i][2] = word.get(0);
             System.out.println(s[i][0] + "\t" + s[i][1] + "\t" + s[i][2]);
             for (int j = 1; j < word.size(); j++) {
@@ -114,7 +114,7 @@ public final class Words {
                     i++;
                 }
                 s[i][0] = String.valueOf(i);
-                s[i][1] = (String) slagList[index];
+                s[i][1] = (String) slangList[index];
                 s[i][2] = word.get(j);
                 System.out.println(s[i][0] + "\t" + s[i][1] + "\t" + s[i][2]);
             }
@@ -195,7 +195,6 @@ public final class Words {
             }
             scanner.close();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
         }
         int size = historySlag.size();
         String s[][] = new String[size][3];

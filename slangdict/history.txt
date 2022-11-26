@@ -1,0 +1,83 @@
+#1`Number one
+$`Dollar
+$` money
+$`Dollar
+$` money
+^^^`Reference to line above
+FFR` For Future Reference
+FFR` For Future Reference
+^^^`Reference to line above
+$_$`Has money
+^^^`Reference to line above
+$` money
+$` money
+$_$`Has money
+BREAD`Money
+BUCK` Money
+BUCK` Money
+BUCKS` money
+BUCKS` money
+BUSKING`Playing music in public for money
+CHEDDA` money
+CHEDDA` money
+CHEDDAR`Money
+CHEESE` Money
+CHEESE` Money
+CHEESE` Money
+CHEESE` Money
+CHEESE` Money
+CHEESE` Money
+CHIPS`Money
+CHIPS`Money
+CHIPS`Money
+DINERO`Money
+DMS`Dirty Money Syndicate
+DOSH`Money
+DOUGH`Money
+DOUGH`Money
+GOLD DIGGER`Person who loves someone just for their money
+GUAP`Money
+GWAP`Money
+GWOP`Money
+HIT A LICK`Get a lot of money very quickly
+HOLD`Borrow (money)
+KNOT`Roll of paper money
+LOLLY`Money
+LOOT`Money 
+MILEAGE`Value for money
+MOOLA`Money
+MOOLAH`Money
+MULA`Money
+OPM`Other People's Money
+PAPER`Money
+PITCH`Contribute money
+RACKS`Money
+RMT`Real-Money Trading
+ROSES`Money
+SCRILLA`Money
+SCRILLA`Money
+SKINT` having no money
+SKINT` having no money
+SKRILLA`Money
+SPOT`Lend money
+TIM`Time Is Money
+TRICKIN`Spending money on a girl
+VEETA`Money
+VFM`Value For Money
+WOMBAT`Waste Of Money, Brains, And Time
+WONGA`Money
+WOTAM`Waste of Time and Money
+YMCMB`Young Money Cash Money Billionaires
+\O/`Happy
+\O/` arms in the air
+\O/`Happy
+\O/` arms in the air
+ZZZ`Sleepy
+ZZZ` bored
+ZZZ` tired
+ZZZ`Sleepy
+ZZZ` bored
+ZZZ` tired
+ZZZ`Sleepy
+ZZZ` bored
+ZZZ` tired

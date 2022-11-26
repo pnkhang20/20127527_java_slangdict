@@ -1,0 +1,10 @@
+#1`Number one
+$`Dollar
+$` money
+$`Dollar
+$` money
+^^^`Reference to line above
+FFR` For Future Reference
+FFR` For Future Reference
+^^^`Reference to line above
+$_$`Has money

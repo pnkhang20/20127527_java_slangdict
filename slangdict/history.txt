@@ -29,3 +29,4 @@ GOSH`Exclamation of suprise or shock
 AMZ`Amazing
 BAM`Below Average Mentality| Exclamation of happiness
 ^^^`Reference to line above|ko
+^^^`Reference to line above|ko

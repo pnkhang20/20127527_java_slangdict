@@ -9,51 +9,69 @@ package k.slangdict;
  * @author PHAM NGUYEN KHANG - 20127527 JAVA - KTPM2
  *
  */
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 
 public class Slangdict {
 
     public static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
+    public static void main(String[] args) throws FileNotFoundException, IOException, Exception {
+
+        Words words = new Words();
+        //Test functions
+        //words.findBySlang();
+        //words.findBySlang();
+        //words.saveHistory("FFR");
+        //words.saveFile();
+        //words.delete();
+        //words.printAll();
+        //words.findByDefinition();
+        //words.delete("SCO");
+        //words.viewHistory();
+        //words.resetDefault();
+        //words.addSlang();
+        //words.randomSlang();
+        //words.quizSlangDefinition();
+        //words.quizDefinitionSlang();
+
         String choice = null;
         boolean exit = false;
-        Controller controller = new Controller();
         Menu();
-        
+
         while (true) {
             choice = sc.nextLine();
             switch (choice) {
                 case "1":
-                    controller.findBySlang();
+                    words.findBySlang();
                     break;
                 case "2":
-                    controller.findByDef();
+                    words.findByDefinition();
                     break;
                 case "3":
-                    controller.showHistory();
+                    words.viewHistory();
                     break;
                 case "4":
-                    controller.addSlang();
+                    words.addSlang();
                     break;
                 case "5":
-                    controller.edit();
+                    words.edit();
                     break;
                 case "6":
-                    controller.delete();
+                    words.delete();
                     break;
                 case "7":
-                    controller.reset();
+                    words.resetDefault();
                     break;
                 case "8":
-                    controller.random();
+                    words.randomSlang();
                     break;
                 case "9":
-                    controller.quizSlangDefinition();
+                    words.quizSlangDefinition();
                     break;
                 case "10":
-                    controller.quizDefinitionSlang();
+                    words.quizDefinitionSlang();
                     break;
                 case "11":
                     System.out.println("Exit");
@@ -65,6 +83,7 @@ public class Slangdict {
             }
             if (exit) {
                 break;
+
             }
             Menu();
         }

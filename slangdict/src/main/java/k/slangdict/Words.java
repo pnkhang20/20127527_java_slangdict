@@ -1,4 +1,3 @@
-
 package k.slangdict;
 
 import java.util.*;
@@ -6,7 +5,7 @@ import java.io.*;
 
 /**
  *
- * @author kp
+ * @author PHAM NGUYEN KHANG - 20127527 JAVA - KTPM2
  */
 public final class Words {
 
@@ -27,6 +26,10 @@ public final class Words {
         } catch (Exception e) {
             System.out.println("File Not Found!");
         }
+    }
+
+    public HashMap getDict() {
+        return this.dict;
     }
 
     public void readFile(String fileName) throws Exception {
@@ -74,7 +77,6 @@ public final class Words {
 //            long elapsedTime = System.nanoTime() - startTime;
 //            System.out.println("Total execution time to create 1000K objects in Java in millis: " + elapsedTime / 10000000);
         }
-
 
     }
 
@@ -134,7 +136,7 @@ public final class Words {
                     String temp = def.toLowerCase();
                     if (temp.contains(definitionToFind.toLowerCase())) {
                         getWordDefinition(slang, definitionToFind);
-                        
+
                         saveHistory(slang);
                     }
                 }
@@ -491,7 +493,7 @@ public final class Words {
 
     }
 
-    public void resetDefault() throws FileNotFoundException, IOException {
+    public void resetDefault() throws FileNotFoundException, IOException, Exception {
         BufferedReader br = new BufferedReader(new FileReader(LOAD));
         PrintWriter printWriter = new PrintWriter(new File(ORIGINAL));
         PrintWriter printWriter2 = new PrintWriter(new File(HISTORY));
@@ -509,11 +511,11 @@ public final class Words {
             System.out.println("\nSuccessfuly Reset File to Factory!");
             System.out.println("The History File have Also been Reseted to Factory!\n");
             printWriter.close();
+            printWriter2.close();
+            readFile(LOAD);
         } catch (FileNotFoundException e) {
             System.out.println("File Not Found!\n");
         }
-
     }
-
 
 }

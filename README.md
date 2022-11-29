@@ -3,17 +3,18 @@ Student ID: 20127527
 Class: 20KTPM2 - Java
 
 PROJECT SELF-GRADING.
-
-1. Find by Slang Word - 100
-2. Find by Definition - 100
-3. Show history - 100
-4. Add a Slang - 100
-5. Edit a Slang - 100
-6. Delete a Slang with Confirmation - 100
-7. Reset original slang words - 100
-8. Random Slang (On this day Slang) - 100
-9. Quiz by Slang - 100
-10. Quiz by Definition - 100
+DSA used: HashMap and ArrayList
+1. Find by Slang Word - 10
+2. Find by Definition - 10
+3. Show history - 10
+4. Add a Slang - 10
+5. Edit a Slang - 10
+6. Delete a Slang with Confirmation - 10
+7. Reset original slang words - 10
+8. Random Slang (On this day Slang) - 10
+9. Quiz by Slang - 10
+10. Quiz by Definition - 10
 
 Youtube link: https://www.youtube.com/watch?v=3V9mpXt_hGY
+
 github link : https://github.com/pnkhang20/20127527_java_slangdict

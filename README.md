@@ -14,3 +14,6 @@ PROJECT SELF-GRADING.
 8. Random Slang (On this day Slang) - 100
 9. Quiz by Slang - 100
 10. Quiz by Definition - 100
+
+Youtube link: https://www.youtube.com/watch?v=3V9mpXt_hGY
+github link : https://github.com/pnkhang20/20127527_java_slangdict
